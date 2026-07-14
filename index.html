@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Craft — articles on design, development, and building things that last." />
+  <title>Web Craft — Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="./assets/js/index.js"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ════════════════════════════════════════════════════════
+       SITE HEADER / NAV 
+  ════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">Web <span>Craft</span></a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" aria-current="page">Blog</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <!-- Mobile nav (hidden by default) -->
+      <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="#">Design</a>
+        <a href="#">Development</a>
+        <a href="#">About</a>
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <span class="hero-eyebrow">Est. 2024</span>
+        <h1 id="hero-heading">Ideas worth building,<br>words worth reading</h1>
+        <p>In-depth articles on design, front-end development, and the craft of shipping software people love.</p>
+        <div class="hero-search" role="search">
+          <label for="search-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search articles</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search articles…"
+            aria-label="Search articles"
+          />
+          <button type="button" aria-label="Submit search">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category filter -->
+    <section class="category-bar" aria-label="Filter by category">
+      <div class="container">
+        <ul class="category-list" role="list">
+          <li><button class="category-chip active" aria-pressed="true">All posts</button></li>
+          <li><button class="category-chip" aria-pressed="false">Design</button></li>
+          <li><button class="category-chip" aria-pressed="false">Development</button></li>
+          <li><button class="category-chip" aria-pressed="false">CSS</button></li>
+          <li><button class="category-chip" aria-pressed="false">Accessibility</button></li>
+          <li><button class="category-chip" aria-pressed="false">Performance</button></li>
+          <li><button class="category-chip" aria-pressed="false">Career</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured post -->
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <p class="featured-label" id="featured-heading">Featured article</p>
+        <article class="featured-card">
+          <div class="featured-image img-blue" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5">
+              <path d="M4 5h16M4 12h10M4 19h6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="featured-body">
+            <span class="post-tag">CSS</span>
+            <h2><a href="post.html">The complete guide to CSS Grid — from first principles to production</a></h2>
+            <p>CSS Grid is the most powerful layout system available in CSS. This guide walks through every property, every pattern, and every gotcha you'll encounter building real layouts.</p>
+            <div class="post-meta">
+              <div class="author-avatar" aria-hidden="true">MA</div>
+              <span>Maria Alcantara</span>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <time datetime="2024-05-12">May 12, 2024</time>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <span>12 min read</span>
+            </div>
+            <a href="post.html" class="read-more" aria-label="Read the full article on CSS Grid">
+              Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Post grid -->
+    <section class="posts-section" aria-labelledby="latest-heading">
+      <div class="container">
+        <div class="posts-section-header">
+          <h2 id="latest-heading">Latest articles</h2>
+          <a href="#" class="view-all">View all →</a>
+        </div>
+
+        <div class="post-grid">
+
+          <!-- Card 1 -->
+          <article class="post-card">
+            <div class="card-image img-purple" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Design</span>
+              <h3><a href="post.html">How to build a design system from scratch in under a week</a></h3>
+              <p>Design tokens, component libraries, and documentation — a practical framework for small teams moving fast.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-purple" aria-hidden="true">JL</div>
+                <span>James Lim</span>
+              </div>
+              <time datetime="2024-05-08">May 8 · 8 min</time>
+            </footer>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="post-card">
+            <div class="card-image img-green" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Performance</span>
+              <h3><a href="post.html">Core Web Vitals in 2024 — what actually moves the needle</a></h3>
+              <p>LCP, CLS, INP — a hands-on audit of what improvements make a real difference to users and rankings.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-green" aria-hidden="true">SR</div>
+                <span>Sofia Reyes</span>
+              </div>
+              <time datetime="2024-05-03">May 3 · 10 min</time>
+            </footer>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="post-card">
+            <div class="card-image img-amber" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Career</span>
+              <h3><a href="post.html">Landing your first developer job without a CS degree</a></h3>
+              <p>Portfolio strategy, networking, and how to frame your self-taught background as a strength in interviews.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-amber" aria-hidden="true">DK</div>
+                <span>Dana Kim</span>
+              </div>
+              <time datetime="2024-04-29">Apr 29 · 7 min</time>
+            </footer>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="post-card">
+            <div class="card-image img-rose" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Accessibility</span>
+              <h3><a href="post.html">Writing accessible HTML — the 12 rules every developer should know</a></h3>
+              <p>Semantic elements, ARIA roles, keyboard nav, and focus management — practical accessibility that ships.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-rose" aria-hidden="true">MA</div>
+                <span>Maria Alcantara</span>
+              </div>
+              <time datetime="2024-04-22">Apr 22 · 9 min</time>
+            </footer>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="post-card">
+            <div class="card-image img-teal" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Development</span>
+              <h3><a href="post.html">JavaScript you actually need — a no-nonsense guide for HTML developers</a></h3>
+              <p>DOM manipulation, event handling, fetch, and local storage — the 20% of JS that covers 80% of real tasks.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-teal" aria-hidden="true">JL</div>
+                <span>James Lim</span>
+              </div>
+              <time datetime="2024-04-15">Apr 15 · 11 min</time>
+            </footer>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="post-card">
+            <div class="card-image img-blue" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5">
+                <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">CSS</span>
+              <h3><a href="post.html">Tailwind CSS vs custom CSS — when to use each and why</a></h3>
+              <p>A practical comparison based on real projects, team sizes, and the maintenance cost of each approach over time.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author">
+                <div class="avatar-sm av-blue" aria-hidden="true">SR</div>
+                <span>Sofia Reyes</span>
+              </div>
+              <time datetime="2024-04-10">Apr 10 · 6 min</time>
+            </footer>
+          </article>
+
+        </div><!-- /.post-grid -->
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Pagination">
+          <a href="#" class="page-btn" aria-label="Previous page">‹</a>
+          <a href="#" class="page-btn current" aria-current="page" aria-label="Page 1">1</a>
+          <a href="#" class="page-btn" aria-label="Page 2">2</a>
+          <a href="#" class="page-btn" aria-label="Page 3">3</a>
+          <span class="page-ellipsis" aria-hidden="true">…</span>
+          <a href="#" class="page-btn" aria-label="Page 8">8</a>
+          <a href="#" class="page-btn" aria-label="Next page">›</a>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <h2 id="newsletter-heading">Get the good stuff in your inbox</h2>
+        <p>New articles every Tuesday. No spam. Unsubscribe anytime.</p>
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <label for="email-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+          <input
+            id="email-input"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════
+       SITE FOOTER  (copy to every page)
+  ════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">Web <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Topics</h4>
+          <ul role="list">
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Performance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Write for us</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Cookie settings</a></li>
+            <li><a href="#">RSS feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 The Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Articles on UI design, typography, design systems, colour theory, and the visual craft behind great digital products." />
+  <title>Design — The Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">The <span>Craft</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="design.html" aria-current="page">Design</a></li>
+          <li><a href="development.html">Development</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <nav id="mobile-nav" class="nav-mobile" style="display:none" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="design.html">Design</a>
+        <a href="development.html">Development</a>
+        <a href="about.html">About</a>
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Blog</a></li>
+          <li><span aria-current="page">Design</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="cat-hero" aria-labelledby="cat-heading">
+      <div class="container">
+        <p class="cat-eyebrow">Topic</p>
+        <h1 id="cat-heading">Design</h1>
+        <p>UI design, typography, colour theory, design systems, and the visual craft behind digital products that people enjoy using — not just looking at.</p>
+        <div class="cat-stats" role="group" aria-label="Design topic statistics">
+          <div class="stat"><span class="stat-value">18</span><span class="stat-label">articles</span></div>
+          <div class="stat"><span class="stat-value">5</span><span class="stat-label">authors</span></div>
+          <div class="stat"><span class="stat-value">3.1h</span><span class="stat-label">total read time</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="topic-bar" aria-label="Filter by design topic">
+      <div class="container">
+        <ul class="topic-list" role="list">
+          <li><button class="topic-chip active" aria-pressed="true" onclick="setTopic(this)">All Design</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">UI Design</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Typography</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Design Systems</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Colour Theory</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">UX Research</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Figma</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="featured-section" aria-labelledby="featured-label">
+      <div class="container">
+        <p class="section-label" id="featured-label">Featured article</p>
+        <article class="featured-card">
+          <div class="feat-img" aria-hidden="true">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1" opacity=".35">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <div class="feat-body">
+            <span class="post-tag">Design Systems</span>
+            <h2><a href="post.html">How to build a design system from scratch in under a week</a></h2>
+            <p>Design tokens, component libraries, and documentation — a practical framework for small teams moving fast without sacrificing consistency.</p>
+            <div class="post-meta">
+              <div class="author-avatar" aria-hidden="true">JL</div>
+              <span>James Lim</span>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <time datetime="2024-05-08">May 8, 2024</time>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <span>8 min</span>
+            </div>
+            <a href="post.html" class="read-more" aria-label="Read article: How to build a design system from scratch">
+              Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="posts-section" aria-labelledby="latest-label">
+      <div class="container">
+        <div class="posts-header">
+          <h2 id="latest-label">Latest design articles</h2>
+          <a href="#" class="view-all">View all →</a>
+        </div>
+        <div class="post-grid">
+
+          <article class="post-card">
+            <div class="card-img bg-pink" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="1.5" opacity=".45"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-width="2.5" stroke-linecap="round"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">UX Research</span>
+              <h3><a href="post.html">Why users don't read — and how to design for the way they actually behave</a></h3>
+              <p>Eye-tracking studies, scanning patterns, and layout principles that match how real people consume digital content.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-pink" aria-hidden="true">SR</div><span>Sofia Reyes</span></div>
+              <time datetime="2024-04-30">Apr 30 · 6 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-indigo" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="1.5" opacity=".45"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Typography</span>
+              <h3><a href="post.html">Choosing type that works — a non-designer's guide to font pairing</a></h3>
+              <p>The rules behind serif and sans-serif pairings, optical sizing, and line-height that makes body copy a pleasure to read.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-indigo" aria-hidden="true">MA</div><span>Maria Alcantara</span></div>
+              <time datetime="2024-04-22">Apr 22 · 7 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-violet" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity=".45"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Colour Theory</span>
+              <h3><a href="post.html">Colour in UI — the practical guide to accessible, beautiful palettes</a></h3>
+              <p>From HSL colour spaces to WCAG contrast ratios, building a colour system that is both visually compelling and accessible.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-purple" aria-hidden="true">JL</div><span>James Lim</span></div>
+              <time datetime="2024-04-14">Apr 14 · 9 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-fuchsia" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a21caf" stroke-width="1.5" opacity=".45"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">UI Design</span>
+              <h3><a href="post.html">Spacing systems — the 8-point grid and why it makes everything easier</a></h3>
+              <p>How a consistent spacing scale eliminates guesswork, speeds up design handoff, and makes your UI look instantly more polished.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-blue" aria-hidden="true">DK</div><span>Dana Kim</span></div>
+              <time datetime="2024-04-08">Apr 8 · 5 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-rose" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5" opacity=".45"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Figma</span>
+              <h3><a href="post.html">Figma variables — how to use them to power your design tokens</a></h3>
+              <p>Variables in Figma finally close the gap between design and code. Here is a practical workflow for a single source of truth.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-green" aria-hidden="true">SR</div><span>Sofia Reyes</span></div>
+              <time datetime="2024-03-28">Mar 28 · 8 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-purple" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity=".45"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="post-tag">Design Systems</span>
+              <h3><a href="post.html">Dark mode done right — the CSS and design decisions that matter</a></h3>
+              <p>Dark mode is more than inverting colours. Here is how to build a system that feels intentional at every level.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-amber" aria-hidden="true">MA</div><span>Maria Alcantara</span></div>
+              <time datetime="2024-03-18">Mar 18 · 10 min</time>
+            </footer>
+          </article>
+
+        </div>
+
+        <nav class="pagination" aria-label="Pagination">
+          <button class="page-btn" aria-label="Previous page">‹</button>
+          <button class="page-btn current" aria-current="page" aria-label="Page 1">1</button>
+          <button class="page-btn" aria-label="Page 2">2</button>
+          <button class="page-btn" aria-label="Page 3">3</button>
+          <span class="page-ellipsis" aria-hidden="true">…</span>
+          <button class="page-btn" aria-label="Page 4">4</button>
+          <button class="page-btn" aria-label="Next page">›</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter" aria-labelledby="nl-heading">
+      <div class="container">
+        <h2 id="nl-heading">Design ideas in your inbox</h2>
+        <p>New articles every Tuesday. No spam. Unsubscribe anytime.</p>
+        <form class="nl-form" action="#" method="post" novalidate>
+          <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+          <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">The <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+        <div class="footer-col"><h4>Topics</h4><ul><li><a href="design.html">Design</a></li><li><a href="development.html">Development</a></li><li><a href="category.html">CSS</a></li><li><a href="category.html">Accessibility</a></li><li><a href="category.html">Performance</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html">Authors</a></li><li><a href="#">Write for us</a></li><li><a href="#newsletter">Newsletter</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of use</a></li><li><a href="#">Cookie settings</a></li><li><a href="#">RSS feed</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Articles on JavaScript, React, Node.js, front-end tooling, testing, Git, and the engineering practices that make codebases easier to work in." />
+  <title>Development — The Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">The <span>Craft</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="development.html" aria-current="page">Development</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <nav id="mobile-nav" class="nav-mobile" style="display:none" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="design.html">Design</a>
+        <a href="development.html">Development</a>
+        <a href="about.html">About</a>
+        <a href="#newsletter" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol><li><a href="index.html">Blog</a></li><li><span aria-current="page">Development</span></li></ol>
+      </div>
+    </nav>
+
+    <section class="cat-hero" aria-labelledby="cat-heading">
+      <div class="container">
+        <p class="cat-eyebrow">Topic</p>
+        <h1 id="cat-heading">Development</h1>
+        <p>JavaScript, React, Node.js, browser APIs, front-end tooling, testing, and the engineering practices that make codebases easier to build and maintain over time.</p>
+        <div class="cat-stats" role="group">
+          <div class="stat"><span class="stat-value">31</span><span class="stat-label">articles</span></div>
+          <div class="stat"><span class="stat-value">6</span><span class="stat-label">authors</span></div>
+          <div class="stat"><span class="stat-value">5.4h</span><span class="stat-label">total read time</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="topic-bar" aria-label="Filter by development topic">
+      <div class="container">
+        <ul class="topic-list" role="list">
+          <li><button class="topic-chip active" aria-pressed="true" onclick="setTopic(this)">All Development</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">JavaScript</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">React</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Node.js</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Tooling</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Testing</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">Git</button></li>
+          <li><button class="topic-chip" aria-pressed="false" onclick="setTopic(this)">APIs</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="featured-section" aria-labelledby="featured-label">
+      <div class="container">
+        <p class="section-label" id="featured-label">Featured article</p>
+        <article class="featured-card">
+          <div class="feat-img" aria-hidden="true">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1" opacity=".35">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="feat-body">
+            <span class="post-tag">JavaScript</span>
+            <h2><a href="post.html">JavaScript you actually need — a no-nonsense guide for HTML developers</a></h2>
+            <p>DOM manipulation, event handling, fetch, and localStorage — the 20% of JavaScript that covers 80% of real tasks. No frameworks required.</p>
+            <div class="post-meta">
+              <div class="author-avatar" aria-hidden="true">JL</div>
+              <span>James Lim</span>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <time datetime="2024-04-15">Apr 15, 2024</time>
+              <span class="meta-dot" aria-hidden="true">·</span>
+              <span>11 min</span>
+            </div>
+            <a href="post.html" class="read-more" aria-label="Read article on JavaScript essentials">
+              Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="posts-section" aria-labelledby="latest-label">
+      <div class="container">
+        <div class="posts-header">
+          <h2 id="latest-label">Latest development articles</h2>
+          <a href="#" class="view-all">View all →</a>
+        </div>
+        <div class="post-grid">
+
+          <article class="post-card">
+            <div class="card-img bg-teal" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".45"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">React</span>
+              <h3><a href="post.html">React in 2024 — what you actually need to know to get hired</a></h3>
+              <p>Hooks, state management, React Query, and the patterns senior developers look for in junior code during interviews.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-teal" aria-hidden="true">SR</div><span>Sofia Reyes</span></div>
+              <time datetime="2024-05-01">May 1 · 13 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-green" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" opacity=".45"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 4.18 2 2 0 015 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">Node.js</span>
+              <h3><a href="post.html">Building your first REST API with Node.js and Express — from scratch</a></h3>
+              <p>Routes, middleware, error handling, and connecting to a database — the full beginner-to-working-API path.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-green" aria-hidden="true">JL</div><span>James Lim</span></div>
+              <time datetime="2024-04-20">Apr 20 · 14 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-emerald" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" opacity=".45"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">Testing</span>
+              <h3><a href="post.html">Testing front-end code that doesn't make you want to quit</a></h3>
+              <p>Vitest, React Testing Library, and MSW — a practical testing setup that actually catches bugs without slowing you down.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-blue" aria-hidden="true">MA</div><span>Maria Alcantara</span></div>
+              <time datetime="2024-04-08">Apr 8 · 10 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-lime" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="1.5" opacity=".45"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">Git</span>
+              <h3><a href="post.html">Git workflows for solo developers and small teams — what actually works</a></h3>
+              <p>Branching strategies, commit conventions, rebasing vs merging, and how to keep a clean history on real projects.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-amber" aria-hidden="true">DK</div><span>Dana Kim</span></div>
+              <time datetime="2024-03-30">Mar 30 · 7 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-cyan" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.5" opacity=".45"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">APIs</span>
+              <h3><a href="post.html">Fetch, Axios, and async/await — when to use what</a></h3>
+              <p>Error handling, request cancellation, retry logic, and interceptors — the patterns that turn a working API call into production-ready code.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-sky" aria-hidden="true">SR</div><span>Sofia Reyes</span></div>
+              <time datetime="2024-03-20">Mar 20 · 8 min</time>
+            </footer>
+          </article>
+
+          <article class="post-card">
+            <div class="card-img bg-sky" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.5" opacity=".45"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="code-tag">Tooling</span>
+              <h3><a href="post.html">Vite vs Webpack in 2024 — why everyone is switching and whether you should</a></h3>
+              <p>Bundle size, build speed, plugin ecosystem, and migration cost — a practical comparison for teams making the decision right now.</p>
+            </div>
+            <footer class="card-footer">
+              <div class="card-author"><div class="avatar-sm av-purple" aria-hidden="true">JL</div><span>James Lim</span></div>
+              <time datetime="2024-03-10">Mar 10 · 9 min</time>
+            </footer>
+          </article>
+
+        </div>
+
+        <nav class="pagination" aria-label="Pagination">
+          <button class="page-btn" aria-label="Previous page">‹</button>
+          <button class="page-btn current" aria-current="page" aria-label="Page 1">1</button>
+          <button class="page-btn" aria-label="Page 2">2</button>
+          <button class="page-btn" aria-label="Page 3">3</button>
+          <span class="page-ellipsis" aria-hidden="true">…</span>
+          <button class="page-btn" aria-label="Page 6">6</button>
+          <button class="page-btn" aria-label="Next page">›</button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter" aria-labelledby="nl-heading">
+      <div class="container">
+        <h2 id="nl-heading">Dev articles in your inbox</h2>
+        <p>New articles every Tuesday. No spam. Unsubscribe anytime.</p>
+        <form class="nl-form" action="#" method="post" novalidate>
+          <label for="nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+          <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">The <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+        <div class="footer-col"><h4>Topics</h4><ul><li><a href="design.html">Design</a></li><li><a href="development.html">Development</a></li><li><a href="category.html">CSS</a></li><li><a href="category.html">Accessibility</a></li><li><a href="category.html">Performance</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html">Authors</a></li><li><a href="#">Write for us</a></li><li><a href="#newsletter">Newsletter</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of use</a></li><li><a href="#">Cookie settings</a></li><li><a href="#">RSS feed</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

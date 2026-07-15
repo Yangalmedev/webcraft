@@ -166,6 +166,9 @@ NAVIGATIONS
   opacity: 0.4;
   margin-left: 0.5rem;
 }
+.breadcrumb [aria-current="page"] { 
+  color: var(--color-text); 
+}
 
 /* ════════════════════════════════════════════════════════════
 HERO

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/css/about.css">
+  <script src="../../assets/js/index.js"></script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -313,15 +314,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    toggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('open');
-      mobileNav.style.display = isOpen ? 'flex' : 'none';
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-  </script>
 </body>
 </html>

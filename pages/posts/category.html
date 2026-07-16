@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All articles on CSS — Grid, Flexbox, custom properties, Tailwind, animations, and everything else the browser can do." />
+  <title>CSS Articles — The Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="../../index.html" class="nav-logo">The <span>Craft</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="../../index.html">Blog</a></li>
+          <li><a href="#" aria-current="page">Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Subscribe</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="category.html">CSS</a>
+        <a href="category.html">Development</a>
+        <a href="#">About</a>
+        <a href="#" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Blog</a></li>
+          <li><span aria-current="page">CSS</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Category hero -->
+    <section class="category-hero" aria-labelledby="category-heading">
+      <div class="container">
+        <p class="category-eyebrow">Topic</p>
+        <h1 id="category-heading">CSS</h1>
+        <p>Everything the browser can do with a stylesheet — Grid, Flexbox, custom properties, animations, Tailwind, and techniques for writing CSS that stays maintainable at scale.</p>
+        <div class="category-stats" role="group" aria-label="Category statistics">
+          <div class="stat">
+            <span class="stat-value">24</span>
+            <span class="stat-label">articles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">6</span>
+            <span class="stat-label">authors</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">4.2h</span>
+            <span class="stat-label">total read time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page layout -->
+    <div class="container">
+      <div class="page-layout">
+
+        <!-- Filter sidebar -->
+        <aside class="filter-sidebar" aria-label="Filter and search articles">
+
+          <!-- Search -->
+          <div class="filter-section">
+            <p class="filter-heading" id="search-label">Search in CSS</p>
+            <div class="search-box">
+              <label for="search-articles" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search CSS articles</label>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b6860" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
+              <input id="search-articles" type="search" placeholder="Search articles…" aria-labelledby="search-label" />
+            </div>
+          </div>
+
+          <!-- Sub-topics -->
+          <div class="filter-section">
+            <p class="filter-heading">Sub-topics</p>
+            <ul class="filter-list" role="list">
+              <li>
+                <button class="filter-item active" aria-pressed="true" onclick="setFilter(this)">
+                  All CSS <span class="filter-count">24</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Grid <span class="filter-count">6</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Flexbox <span class="filter-count">4</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Custom properties <span class="filter-count">5</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Animations <span class="filter-count">3</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Tailwind CSS <span class="filter-count">4</span>
+                </button>
+              </li>
+              <li>
+                <button class="filter-item" aria-pressed="false" onclick="setFilter(this)">
+                  Typography <span class="filter-count">2</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sort -->
+          <div class="filter-section">
+            <label class="filter-heading" for="sort-select">Sort by</label>
+            <select id="sort-select" class="sort-select" aria-label="Sort articles by">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="popular">Most popular</option>
+              <option value="read-time-asc">Shortest read</option>
+              <option value="read-time-desc">Longest read</option>
+            </select>
+          </div>
+
+          <!-- Level filter -->
+          <div class="filter-section">
+            <p class="filter-heading">Level</p>
+            <div class="tag-cloud" role="group" aria-label="Filter by skill level">
+              <button class="tag-btn active" aria-pressed="true" onclick="toggleTag(this)">All levels</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Beginner</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Intermediate</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Advanced</button>
+            </div>
+          </div>
+
+          <!-- Popular tags -->
+          <div class="filter-section">
+            <p class="filter-heading">Popular tags</p>
+            <div class="tag-cloud" role="group" aria-label="Filter by tag">
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Grid</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Flexbox</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Layout</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Responsive</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Dark mode</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Tailwind</button>
+              <button class="tag-btn" aria-pressed="false" onclick="toggleTag(this)">Variables</button>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Article list -->
+        <section aria-labelledby="results-heading">
+
+          <div class="content-header">
+            <div>
+              <h2 id="results-heading" style="font-family:var(--font-serif);font-size:1.25rem;font-weight:600;margin-bottom:4px">All CSS articles</h2>
+              <p class="results-count">Showing <strong>8</strong> of 24 articles</p>
+            </div>
+            <div class="active-filter-row" aria-label="Active filters" id="active-filters">
+              <span class="active-filter">
+                All CSS
+                <button onclick="clearFilter()" aria-label="Remove filter: All CSS">×</button>
+              </span>
+              <button class="clear-all" onclick="clearAllFilters()" aria-label="Clear all filters">Clear all</button>
+            </div>
+          </div>
+
+          <ol class="post-list" aria-label="CSS articles">
+
+            <!-- Featured / first result -->
+            <li class="post-list-item featured-result">
+              <div class="list-thumb th-blue" aria-hidden="true">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.2" opacity=".4">
+                  <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">The complete guide to CSS Grid — from first principles to production</a></h2>
+                <p>CSS Grid is the most powerful layout system available in CSS. This guide walks through every property, every pattern, and every gotcha you'll encounter building real layouts.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-blue" aria-hidden="true">MA</div>
+                    <span>Maria Alcantara</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-05-12">May 12, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>12 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 2 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-teal" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".5">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">Tailwind CSS vs custom CSS — when to use each and why</a></h2>
+                <p>A practical comparison based on real projects, team sizes, and the maintenance cost of each approach over time.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-green" aria-hidden="true">SR</div>
+                    <span>Sofia Reyes</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-04-10">Apr 10, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>6 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Beginner</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 3 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-purple" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity=".5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">CSS custom properties — a complete guide to design tokens</a></h2>
+                <p>How to use CSS variables to build scalable design systems — from basic usage to dynamic theming and dark mode.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-purple" aria-hidden="true">JL</div>
+                    <span>James Lim</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-04-14">Apr 14, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>9 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Newsletter inline CTA (inserted after 3rd result) -->
+            <li aria-hidden="true">
+              <div class="newsletter-inline">
+                <h3>Enjoying these articles?</h3>
+                <p>Get new CSS articles in your inbox every Tuesday. No spam, no noise.</p>
+                <div class="newsletter-row">
+                  <label for="inline-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+                  <input id="inline-email" type="email" placeholder="you@example.com" autocomplete="email" />
+                  <button type="button">Subscribe</button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 4 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-amber" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5" opacity=".5">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">Flexbox in 2024 — everything you need and nothing you don't</a></h2>
+                <p>A no-fluff guide to Flexbox covering real layout patterns: centering, nav bars, card rows, and responsive wrapping.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-amber" aria-hidden="true">DK</div>
+                    <span>Dana Kim</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-03-28">Mar 28, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>8 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Beginner</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 5 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-rose" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5" opacity=".5">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">CSS animations without JavaScript — what's actually possible in 2024</a></h2>
+                <p>From simple transitions to scroll-driven animations — the browser can do far more than most developers realise.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-blue" aria-hidden="true">MA</div>
+                    <span>Maria Alcantara</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-03-15">Mar 15, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>11 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 6 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-blue" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" opacity=".5">
+                  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">Building a design system with CSS custom properties only — no tooling required</a></h2>
+                <p>How to implement consistent spacing, colour, and typography across a multi-page site using nothing but native CSS.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-purple" aria-hidden="true">JL</div>
+                    <span>James Lim</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-02-20">Feb 20, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>14 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Advanced</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 7 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-green" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" opacity=".5">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">Mobile-first CSS — why you should write small screen styles first</a></h2>
+                <p>The argument for mobile-first is not just philosophical — it produces smaller, faster stylesheets and fewer overrides.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-green" aria-hidden="true">SR</div>
+                    <span>Sofia Reyes</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-02-05">Feb 5, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>7 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Beginner</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- Article 8 -->
+            <li class="post-list-item">
+              <div class="list-thumb th-purple" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity=".5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="list-body">
+                <span class="post-tag tag-css">CSS</span>
+                <h2><a href="post.html">CSS specificity — a visual guide to the cascade and inheritance</a></h2>
+                <p>Why your styles keep getting overridden, explained clearly with diagrams — and how to structure your CSS to avoid the fight.</p>
+                <div class="list-meta">
+                  <div class="author-mini">
+                    <div class="av-mini av-amber" aria-hidden="true">DK</div>
+                    <span>Dana Kim</span>
+                  </div>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <time datetime="2024-01-18">Jan 18, 2024</time>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>9 min</span>
+                  <span class="meta-sep" aria-hidden="true">·</span>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </li>
+
+          </ol>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Pagination">
+            <a href="#" class="page-btn" aria-label="Previous page">‹</a>
+            <a href="#" class="page-btn current" aria-current="page" aria-label="Page 1">1</a>
+            <a href="#" class="page-btn" aria-label="Page 2">2</a>
+            <a href="#" class="page-btn" aria-label="Page 3">3</a>
+            <span class="page-ellipsis" aria-hidden="true">…</span>
+            <a href="#" class="page-btn" aria-label="Page 5">5</a>
+            <a href="#" class="page-btn" aria-label="Next page">›</a>
+          </nav>
+
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">The <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+        <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html">Design</a></li><li><a href="category.html">Development</a></li><li><a href="category.html">CSS</a></li><li><a href="category.html">Accessibility</a></li><li><a href="category.html">Performance</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Authors</a></li><li><a href="#">Write for us</a></li><li><a href="#">Newsletter</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of use</a></li><li><a href="#">Cookie settings</a></li><li><a href="#">RSS feed</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile nav */
+    const toggle = document.querySelector('.nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    /* Sub-topic filter buttons */
+    function setFilter(btn) {
+      document.querySelectorAll('.filter-item').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      // Update active filter chip
+      const label = btn.textContent.trim().replace(/\d+/g, '').trim();
+      document.getElementById('active-filters').innerHTML =
+        `<span class="active-filter">${label}<button onclick="clearFilter()" aria-label="Remove filter: ${label}">×</button></span>
+         <button class="clear-all" onclick="clearAllFilters()" aria-label="Clear all filters">Clear all</button>`;
+    }
+
+    /* Tag toggle */
+    function toggleTag(btn) {
+      const isActive = btn.classList.toggle('active');
+      btn.setAttribute('aria-pressed', isActive);
+    }
+
+    /* Clear filter */
+    function clearFilter() {
+      document.querySelectorAll('.filter-item').forEach((b, i) => {
+        b.classList.toggle('active', i === 0);
+        b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      });
+      document.getElementById('active-filters').innerHTML =
+        `<span class="active-filter">All CSS<button onclick="clearFilter()" aria-label="Remove filter">×</button></span>
+         <button class="clear-all" onclick="clearAllFilters()" aria-label="Clear all filters">Clear all</button>`;
+    }
+
+    function clearAllFilters() {
+      clearFilter();
+      document.querySelectorAll('.tag-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === 0);
+        b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      });
+    }
+  </script>
+
+</body>
+</html>

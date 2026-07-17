@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio strategy, networking, and how to frame your self-taught background as a strength — a practical guide to landing your first developer job." />
+  <title>Landing your first developer job without a CS degree — Web Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">Web <span>Craft</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="category.html">Design</a></li>
+          <li><a href="category.html">Development</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Subscribe</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="category.html">Design</a>
+        <a href="category.html">Development</a>
+        <a href="#">About</a>
+        <a href="#" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="category.html">Career</a></li>
+          <li><span aria-current="page">Landing your first developer job without a CS degree</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="article-layout">
+        <div>
+          <article aria-labelledby="article-heading">
+            <header class="article-header">
+              <span class="post-tag">Career</span>
+              <h1 id="article-heading">Landing your first developer job without a CS degree</h1>
+              <p class="lead">The degree is a proxy — what employers actually want is proof you can build things, solve problems, and keep learning. Here is the portfolio strategy, networking approach, and interview framing that gets self-taught developers hired.</p>
+              <div class="article-meta" role="group" aria-label="Article metadata">
+                <div class="author-block">
+                  <div class="author-avatar" aria-hidden="true">DK</div>
+                  <div>
+                    <div class="author-name">Dana Kim</div>
+                    <div class="author-role">Career Coach · Former Hiring Manager</div>
+                  </div>
+                </div>
+                <div class="meta-divider" aria-hidden="true"></div>
+                <div class="meta-item"><strong>Published</strong><time datetime="2024-04-29">Apr 29, 2024</time></div>
+                <div class="meta-divider" aria-hidden="true"></div>
+                <div class="meta-item"><strong>Read time</strong><span>7 min</span></div>
+                <div class="meta-divider" aria-hidden="true"></div>
+                <div class="meta-item"><strong>Level</strong><span>Beginner</span></div>
+              </div>
+            </header>
+
+            <div class="article-hero-image" role="img" aria-label="Illustration of a career path with milestones">
+              <svg width="120" height="80" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                <circle cx="20" cy="60" r="10" fill="#d97706" opacity=".4"/>
+                <circle cx="50" cy="40" r="10" fill="#d97706" opacity=".55"/>
+                <circle cx="80" cy="25" r="10" fill="#d97706" opacity=".7"/>
+                <circle cx="110" cy="12" r="10" fill="#d97706" opacity=".9"/>
+                <line x1="20" y1="60" x2="50" y2="40" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3"/>
+                <line x1="50" y1="40" x2="80" y2="25" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3"/>
+                <line x1="80" y1="25" x2="110" y2="12" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3"/>
+              </svg>
+            </div>
+
+            <div class="prose" id="article-body">
+
+              <p>I have interviewed hundreds of developers over twelve years. I have hired people with Computer Science PhDs and people who learned to code six months ago from YouTube. The degree has never been the deciding factor. The portfolio always has been.</p>
+
+              <p>This is not feel-good advice. It is a practical observation from the hiring side of the table: <strong>the question every interviewer is asking is "can this person ship things that work?"</strong> Your job is to answer that question before they ask it.</p>
+
+              <div class="callout amber" role="note">
+                <span class="callout-icon" aria-hidden="true">⚠️</span>
+                <div class="callout-body">
+                  <strong>The honest caveat</strong>
+                  Some companies — mostly large enterprises and FAANG — do still screen for degrees at the resume stage. This guide is aimed at the much larger pool of startups, agencies, and mid-size tech companies that explicitly do not.
+                </div>
+              </div>
+
+              <h2 id="portfolio-strategy">The portfolio strategy that actually works</h2>
+
+              <p>Most self-taught developers make the same mistake: they build too many small projects and not enough real ones. A portfolio of ten to-do apps signals "I followed tutorials." A portfolio of three projects that solve actual problems signals "I can think."</p>
+
+              <p>The right number of projects in your portfolio is <strong>three</strong>. Each one should demonstrate a different skill dimension:</p>
+
+              <ol class="prose">
+                <li><strong>Project 1 — Depth:</strong> Something technically challenging. A real API integration, real data, real edge cases handled gracefully.</li>
+                <li><strong>Project 2 — Complexity:</strong> Multi-page, multi-feature. Proves you can architect something larger than a single component.</li>
+                <li><strong>Project 3 — Relevance:</strong> Built for the type of role you want. Applying for front-end roles? A polished, responsive UI. Applying for full-stack? Your own API and database.</li>
+              </ol>
+
+              <h3 id="readme-matters">Your README is half the project</h3>
+
+              <p>Interviewers open GitHub repos constantly. Most see a wall of code with a one-line README that says "a project built with React." That is a missed opportunity.</p>
+
+              <p>Your README should answer four questions in under 30 seconds:</p>
+
+              <ul class="prose">
+                <li>What does this project do and who is it for?</li>
+                <li>Why did you build it this way? (one paragraph on your main technical decision)</li>
+                <li>Where is the live demo? (non-negotiable — always deploy)</li>
+                <li>How do I run it locally? (three commands max)</li>
+              </ul>
+
+              <blockquote>
+                "The developers who stood out in our hiring process were the ones who could explain their decisions, not just their code. The README was often where we first saw that ability."
+                <cite>— Engineering Lead at a 200-person SaaS company</cite>
+              </blockquote>
+
+              <h2 id="framing-your-background">Framing your self-taught background</h2>
+
+              <p>The phrase "I don't have a degree but..." puts you on the defensive before you've said anything meaningful. Reframe it completely.</p>
+
+              <div class="callout green" role="note">
+                <span class="callout-icon" aria-hidden="true">✅</span>
+                <div class="callout-body">
+                  <strong>Instead of apologising for the gap, lead with the proof</strong>
+                  "I've spent the last 18 months building real projects and studying the same fundamentals you'd get in a CS programme — here are three things I shipped." Then shut up and let the work speak.
+                </div>
+              </div>
+
+              <h3 id="what-to-study">What to actually study</h3>
+              <p>You don't need to replicate a 4-year degree. You need enough fundamentals to have intelligent conversations and solve real problems. Focus on these in order:</p>
+
+              <ul class="step-list" role="list">
+                <li class="step-item">
+                  <span class="step-num" aria-hidden="true">1</span>
+                  <span class="step-body"><strong>Data structures and algorithms basics</strong> Arrays, objects, loops, recursion, and Big O notation at a conceptual level. You will be asked about these in interviews.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num" aria-hidden="true">2</span>
+                  <span class="step-body"><strong>How the web works</strong> HTTP requests and responses, the browser rendering pipeline, DNS, and what happens between you typing a URL and the page appearing.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num" aria-hidden="true">3</span>
+                  <span class="step-body"><strong>Git and version control</strong> Not just <code>git commit</code> and <code>git push</code>. Branching, merging, rebasing, and pull request etiquette. This is table stakes.</span>
+                </li>
+                <li class="step-item">
+                  <span class="step-num" aria-hidden="true">4</span>
+                  <span class="step-body"><strong>The browser dev tools</strong> Network tab, console, Elements panel, Lighthouse. Knowing your tools makes you look immediately employable.</span>
+                </li>
+              </ul>
+
+              <h2 id="networking-that-works">Networking that doesn't feel like networking</h2>
+
+              <p>The word "networking" conjures images of awkward conferences and LinkedIn messages that go nowhere. The version that actually works is much simpler: <strong>be publicly useful</strong>.</p>
+
+              <p>Write one short article per month about something you built or learned. It doesn't need to be profound. "Here is how I solved X problem while building Y project" is enough. Post it on dev.to. Share it once. Over six months, this builds a body of work that is far more compelling than a LinkedIn profile with a list of skills.</p>
+
+              <p>The other thing that works: answer questions on GitHub issues for tools you use. Even closing an issue with a good reproduction step or a workaround makes you a known contributor. Maintainers notice.</p>
+
+              <h2 id="the-interview">What to say in the interview</h2>
+
+              <p>For every project in your portfolio, prepare a two-minute story that covers: what you built, one decision you made and why, and one problem you hit and how you solved it. That structure maps directly to the questions you'll be asked.</p>
+
+              <p>When you get a technical question you don't know the answer to — and you will — say this: <em>"I haven't run into that specific scenario, but here is how I'd approach finding the answer."</em> Then walk through your reasoning. Interviewers hire people who know how to learn, not people who know everything.</p>
+
+            </div><!-- /.prose -->
+
+            <footer class="article-footer">
+              <div class="tag-list" aria-label="Article tags">
+                <a href="category.html" class="tag-chip">Career</a>
+                <a href="category.html" class="tag-chip">Self-taught</a>
+                <a href="category.html" class="tag-chip">Portfolio</a>
+                <a href="category.html" class="tag-chip">Job search</a>
+                <a href="category.html" class="tag-chip">Interviews</a>
+              </div>
+              <div class="share-row" aria-label="Share this article">
+                <span class="share-label">Share:</span>
+                <button class="share-btn" type="button" aria-label="Share on Twitter">Twitter</button>
+                <button class="share-btn" type="button" aria-label="Share on LinkedIn">LinkedIn</button>
+                <button class="share-btn" type="button" id="copy-link-btn" aria-label="Copy link to clipboard">Copy link</button>
+              </div>
+            </footer>
+
+            <aside class="author-bio" aria-label="About the author">
+              <div class="author-bio-avatar" aria-hidden="true">DK</div>
+              <div class="author-bio-body">
+                <h3>Dana Kim</h3>
+                <p class="role">Career Coach · Former Hiring Manager</p>
+                <p>Dana spent 8 years hiring developers at startups and a Fortune 500, then moved into career coaching. She has helped over 200 self-taught developers land their first role.</p>
+              </div>
+            </aside>
+          </article>
+
+          <section class="related-posts" aria-labelledby="related-heading">
+            <h2 id="related-heading">Keep reading</h2>
+            <div class="related-grid">
+              <a href="post.html" class="related-card">
+                <div class="related-thumb img-blue" style="background:#dbeafe" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5"><path d="M4 5h16M4 12h10M4 19h6" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3><a href="post.html">The complete guide to CSS Grid — from first principles to production</a></h3>
+                  <time datetime="2024-05-12">May 12, 2024 · 12 min</time>
+                </div>
+              </a>
+              <a href="post-3.html" class="related-card">
+                <div class="related-thumb" style="background:#f0fdf4" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <h3><a href="post-3.html">Core Web Vitals in 2024 — what actually moves the needle</a></h3>
+                  <time datetime="2024-05-03">May 3, 2024 · 10 min</time>
+                </div>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="toc-sidebar" aria-label="Table of contents and newsletter">
+          <nav class="toc-card" aria-label="Table of contents">
+            <h2>In this article</h2>
+            <ul class="toc-list" role="list">
+              <li><a href="#portfolio-strategy">The portfolio strategy that works</a></li>
+              <li class="toc-h3"><a href="#readme-matters">Your README is half the project</a></li>
+              <li><a href="#framing-your-background">Framing your self-taught background</a></li>
+              <li class="toc-h3"><a href="#what-to-study">What to actually study</a></li>
+              <li><a href="#networking-that-works">Networking that doesn't feel like networking</a></li>
+              <li><a href="#the-interview">What to say in the interview</a></li>
+            </ul>
+          </nav>
+          <div class="sidebar-newsletter">
+            <h3>Get articles like this</h3>
+            <p>New articles every Tuesday. No spam. Unsubscribe anytime.</p>
+            <form action="#" method="post" novalidate>
+              <label for="sidebar-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+              <input id="sidebar-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <button type="submit">Subscribe →</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">Web <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+        <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html">Design</a></li><li><a href="category.html">Development</a></li><li><a href="category.html">CSS</a></li><li><a href="category.html">Accessibility</a></li><li><a href="category.html">Performance</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Authors</a></li><li><a href="#">Write for us</a></li><li><a href="#">Newsletter</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of use</a></li><li><a href="#">Cookie settings</a></li><li><a href="#">RSS feed</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    const progressBar = document.getElementById('reading-progress');
+    const article = document.getElementById('article-body');
+    window.addEventListener('scroll', () => {
+      const top = article.getBoundingClientRect().top + window.scrollY;
+      const progress = Math.min(Math.max(((window.scrollY - top) / article.offsetHeight) * 100, 0), 100);
+      progressBar.style.width = progress + '%';
+      progressBar.setAttribute('aria-valuenow', Math.round(progress));
+    }, { passive: true });
+    document.getElementById('copy-link-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.getElementById('copy-link-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy link'; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

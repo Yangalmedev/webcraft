@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CSS Grid is the most powerful layout system in CSS. This guide walks through every property, pattern, and gotcha you'll encounter in real projects." />
+  <title>The complete guide to CSS Grid — Web Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/featured.css">
+
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ════════════════════════════════════════════════════════
+       SITE HEADER / NAV  (identical to index.html)
+  ════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo">Web <span>Craft</span></a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <a href="#" class="nav-cta">Subscribe</a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+        <a href="index.html">Blog</a>
+        <a href="#">Design</a>
+        <a href="#">Development</a>
+        <a href="#">About</a>
+        <a href="#" class="nav-cta">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><span aria-current="page">The complete guide to CSS Grid</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Article and Sidebar -->
+    <div class="container">
+      <div class="article-layout">
+
+        <!-- ── Main article column ─────────────────────────── -->
+        <div>
+          <article aria-labelledby="article-heading">
+
+            <!-- Article header -->
+            <header class="article-header">
+              <span class="post-tag">CSS</span>
+              <h1 id="article-heading">The complete guide to CSS Grid — from first principles to production</h1>
+              <p class="lead">CSS Grid is the most powerful layout system available in CSS. This guide walks through every property, every pattern, and every gotcha you'll encounter building real layouts — from a single-page portfolio to a full magazine-style template.</p>
+
+              <div class="article-meta" role="group" aria-label="Article metadata">
+                <div class="author-block">
+                  <div class="author-avatar" aria-hidden="true">MA</div>
+                  <div>
+                    <div class="author-name">Maria Alcantara</div>
+                    <div class="author-role">Senior CSS Developer</div>
+                  </div>
+                </div>
+
+                <div class="meta-divider" aria-hidden="true"></div>
+
+                <div class="meta-item">
+                  <strong>Published</strong>
+                  <time datetime="2024-05-12">May 12, 2024</time>
+                </div>
+
+                <div class="meta-divider" aria-hidden="true"></div>
+
+                <div class="meta-item">
+                  <strong>Read time</strong>
+                  <span>12 min</span>
+                </div>
+
+                <div class="meta-divider" aria-hidden="true"></div>
+
+                <div class="meta-item">
+                  <strong>Level</strong>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </header>
+
+            <!-- Hero image -->
+            <div class="article-hero-image" role="img" aria-label="Abstract CSS Grid layout illustration">
+              <svg width="120" height="80" viewBox="0 0 120 80" fill="none" aria-hidden="true">
+                <rect x="0" y="0" width="36" height="36" rx="4" fill="#2563eb" opacity=".7"/>
+                <rect x="42" y="0" width="36" height="16" rx="4" fill="#2563eb" opacity=".5"/>
+                <rect x="84" y="0" width="36" height="36" rx="4" fill="#2563eb" opacity=".3"/>
+                <rect x="42" y="20" width="78" height="16" rx="4" fill="#2563eb" opacity=".4"/>
+                <rect x="0" y="42" width="120" height="16" rx="4" fill="#2563eb" opacity=".2"/>
+                <rect x="0" y="64" width="56" height="16" rx="4" fill="#2563eb" opacity=".5"/>
+                <rect x="62" y="64" width="58" height="16" rx="4" fill="#2563eb" opacity=".35"/>
+              </svg>
+            </div>
+
+            <!-- Article body -->
+            <div class="prose" id="article-body">
+
+              <p>Before CSS Grid existed, front-end developers built layouts using floats, clearfix hacks, and prayers. Then Flexbox arrived and things got better — but Flexbox is a one-dimensional tool. CSS Grid is two-dimensional. It controls rows <em>and</em> columns at the same time, which changes what's possible at a fundamental level.</p>
+
+              <div class="callout" role="note" aria-label="Key insight">
+                <span class="callout-icon" aria-hidden="true">💡</span>
+                <div class="callout-body">
+                  <strong>The key mental shift</strong>
+                  Flexbox decides how items arrange themselves. Grid lets <em>you</em> decide where every item goes. Start with Grid for the page-level layout, use Flexbox inside components.
+                </div>
+              </div>
+
+              <h2 id="how-grid-works">How CSS Grid actually works</h2>
+
+              <p>When you write <code>display: grid</code> on a container, you've created a <strong>grid formatting context</strong>. The container becomes the grid, and its direct children become grid items. Nothing changes visually yet — you haven't defined any columns or rows.</p>
+
+              <p>The next step is defining your tracks. A track is a single column or row in the grid. You define them with <code>grid-template-columns</code> and <code>grid-template-rows</code>.</p>
+
+              <pre><code>.container {
+                display: grid;
+                grid-template-columns: 200px 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+              }</code></pre>
+
+              <p>This creates a 3-column grid: a fixed 200px sidebar, and two columns that share the remaining space equally. The <code>1fr</code> unit — "one fraction of available space" — is the most important unit in Grid. It handles all the math you used to do manually.</p>
+
+              <h2 id="the-fr-unit">The <code>fr</code> unit — the most important Grid concept</h2>
+
+              <p>Before <code>fr</code>, making two columns share space equally meant writing <code>width: calc(50% - 12px)</code> and crossing your fingers. With <code>fr</code>, you write <code>1fr 1fr</code> and Grid handles it — gap included.</p>
+
+              <figure class="figure">
+                <div class="figure-image img-grid-demo" aria-hidden="true">
+                  <svg width="80%" height="60%" viewBox="0 0 480 160" fill="none">
+                    <rect x="0" y="20" width="100" height="120" rx="6" fill="#bfdbfe"/>
+                    <rect x="112" y="20" width="172" height="120" rx="6" fill="#93c5fd"/>
+                    <rect x="296" y="20" width="172" height="120" rx="6" fill="#93c5fd"/>
+                    <text x="50" y="88" text-anchor="middle" font-size="12" fill="#1d4ed8" font-family="monospace">200px</text>
+                    <text x="198" y="88" text-anchor="middle" font-size="12" fill="#1e40af" font-family="monospace">1fr</text>
+                    <text x="382" y="88" text-anchor="middle" font-size="12" fill="#1e40af" font-family="monospace">1fr</text>
+                  </svg>
+                </div>
+                <figcaption>A 3-column grid: fixed 200px sidebar + two equal flexible columns using <code>1fr</code>.</figcaption>
+              </figure>
+
+              <h3 id="repeat-function">The <code>repeat()</code> function</h3>
+
+              <p>Writing <code>1fr 1fr 1fr 1fr</code> for a 4-column grid works but gets tedious fast. <code>repeat()</code> is shorthand:</p>
+
+              <pre><code>/* These are identical */
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-columns: repeat(4, 1fr);
+
+/* Auto-responsive: as many columns as fit, minimum 200px each */
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code></pre>
+
+              <p>That last line — <code>repeat(auto-fit, minmax(200px, 1fr))</code> — is one of the most powerful one-liners in all of CSS. It creates a responsive grid that adjusts its column count based on available space, with no media queries required.</p>
+
+              <blockquote>
+                "The best layout systems make the right thing easy and the wrong thing hard. CSS Grid makes responsive layouts easy and manual column math unnecessary."
+                <cite>— Rachel Andrew, CSS Grid contributor</cite>
+              </blockquote>
+
+              <h2 id="placing-items">Placing items precisely</h2>
+
+              <p>Grid's real power comes from explicit placement. You can tell any item exactly where to sit in the grid using line numbers, named areas, or span keywords.</p>
+
+              <pre><code>/* Place an item from column line 1 to 3, row line 1 to 2 */
+.hero {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Span shorthand — span 2 columns from current position */
+.wide-card {
+  grid-column: span 2;
+}</code></pre>
+
+              <h3 id="named-areas">Named grid areas</h3>
+
+              <p>For complex page layouts, named areas are more readable than line numbers. You draw the layout in ASCII art, then assign items to named zones:</p>
+
+              <pre><code>.page {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main    main"
+    "footer  footer  footer";
+  grid-template-columns: 240px 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.site-header { grid-area: header; }
+.sidebar     { grid-area: sidebar; }
+.main        { grid-area: main; }
+.site-footer { grid-area: footer; }</code></pre>
+
+              <h2 id="common-patterns">3 patterns you'll use on every project</h2>
+
+              <h3 id="card-grid">Responsive card grid</h3>
+              <p>The classic use case — a grid of cards that collapses from 4 columns to 2 to 1 as the screen narrows, without a single media query:</p>
+
+              <pre><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+
+              <h3 id="holy-grail">Holy grail layout</h3>
+              <p>The infamous "header, sidebar, main, footer" pattern that once required nested floats and JavaScript is now 12 lines of CSS:</p>
+
+              <pre><code>.layout {
+  display: grid;
+  grid-template:
+    "header" auto
+    "main"   1fr
+    "footer" auto
+    / 1fr;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template:
+      "header  header" auto
+      "sidebar main"   1fr
+      "footer  footer" auto
+      / 240px 1fr;
+  }
+}</code></pre>
+
+              <h3 id="magazine-layout">Magazine layout</h3>
+              <p>Items of different sizes, positioned precisely — the kind of layout that was nearly impossible before Grid:</p>
+
+              <pre><code>.magazine {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.feature { grid-column: span 4; grid-row: span 2; }
+.aside   { grid-column: span 2; }
+.strip   { grid-column: 1 / -1; }  /* Full width — -1 = last line */</code></pre>
+
+              <ul>
+                <li>Use <code>1 / -1</code> as a shorthand for "span the full width" — <code>-1</code> always refers to the last grid line.</li>
+                <li>Combine <code>grid-column: span N</code> with <code>auto-fill</code> to let items reflow naturally.</li>
+                <li><code>grid-auto-rows: minmax(100px, auto)</code> gives implicit rows a minimum height, preventing collapsed cells.</li>
+              </ul>
+
+              <h2 id="common-mistakes">3 mistakes that trip everyone up</h2>
+
+              <p><strong>Mistake 1: Applying Grid to the wrong element.</strong> Grid only controls direct children. A grandchild element is not a grid item and won't respond to <code>grid-column</code> or <code>grid-row</code> — you need a nested grid for that.</p>
+
+              <p><strong>Mistake 2: Confusing <code>auto-fit</code> and <code>auto-fill</code>.</strong> Both create as many columns as possible. The difference is what happens with empty space: <code>auto-fill</code> keeps empty tracks, <code>auto-fit</code> collapses them. For card grids, you almost always want <code>auto-fit</code>.</p>
+
+              <p><strong>Mistake 3: Forgetting about implicit rows.</strong> When you place an item outside your defined rows, Grid creates an implicit row automatically. These default to <code>height: auto</code> — which is usually fine, but can cause uneven row heights. Control them with <code>grid-auto-rows</code>.</p>
+
+              <h2 id="browser-support">Browser support in 2024</h2>
+
+              <p>CSS Grid has 97%+ global support. Every major browser — Chrome, Firefox, Safari, Edge — has supported it since 2017. There are no polyfills needed and no fallbacks required for any modern project. Ship it with confidence.</p>
+
+            </div><!-- /.prose -->
+
+            <!-- Tags and share -->
+            <footer class="article-footer">
+              <div class="tag-list" aria-label="Article tags">
+                <a href="#" class="tag-chip">CSS Grid</a>
+                <a href="#" class="tag-chip">Layout</a>
+                <a href="#" class="tag-chip">CSS</a>
+                <a href="#" class="tag-chip">Responsive design</a>
+                <a href="#" class="tag-chip">Front-end</a>
+              </div>
+
+              <div class="share-row" aria-label="Share this article">
+                <span class="share-label">Share:</span>
+                <button class="share-btn" type="button" aria-label="Share on Twitter / X">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  Twitter
+                </button>
+                <button class="share-btn" type="button" aria-label="Share on LinkedIn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </button>
+                <button class="share-btn" type="button" id="copy-link-btn" aria-label="Copy link to clipboard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                  Copy link
+                </button>
+              </div>
+            </footer>
+
+            <!-- Author bio -->
+            <aside class="author-bio" aria-label="About the author">
+              <div class="author-bio-avatar" aria-hidden="true">MA</div>
+              <div class="author-bio-body">
+                <h3>Maria Alcantara</h3>
+                <p class="role">Senior CSS Developer · The Craft</p>
+                <p>Maria has been writing CSS professionally for 9 years, working with teams at early-stage startups and Fortune 500 companies. She writes about layout, design systems, and the browser platform.</p>
+              </div>
+            </aside>
+
+          </article>
+
+          <!-- Related posts -->
+          <section class="related-posts" aria-labelledby="related-heading">
+            <h2 id="related-heading">Keep reading</h2>
+            <div class="related-grid">
+
+              <a href="post.html" class="related-card">
+                <div class="related-thumb img-purple" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+                </div>
+                <div>
+                  <h3><a href="post.html">Flexbox vs Grid — choosing the right tool for the job</a></h3>
+                  <time datetime="2024-04-28">Apr 28, 2024 · 7 min</time>
+                </div>
+              </a>
+
+              <a href="post.html" class="related-card">
+                <div class="related-thumb img-teal" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div>
+                  <h3><a href="post.html">CSS custom properties — a complete guide to design tokens</a></h3>
+                  <time datetime="2024-04-14">Apr 14, 2024 · 9 min</time>
+                </div>
+              </a>
+
+            </div>
+          </section>
+        </div><!-- /.article-main -->
+
+        <!-- ── Sidebar ──────────────────────────────────────── -->
+        <aside class="toc-sidebar" aria-label="Table of contents and newsletter">
+
+          <!-- Table of contents -->
+          <nav class="toc-card" aria-label="Table of contents">
+            <h2>In this article</h2>
+            <ul class="toc-list" role="list">
+              <li><a href="#how-grid-works">How CSS Grid actually works</a></li>
+              <li><a href="#the-fr-unit">The <code>fr</code> unit</a></li>
+              <li class="toc-h3"><a href="#repeat-function">The repeat() function</a></li>
+              <li><a href="#placing-items">Placing items precisely</a></li>
+              <li class="toc-h3"><a href="#named-areas">Named grid areas</a></li>
+              <li><a href="#common-patterns">3 patterns you'll use on every project</a></li>
+              <li class="toc-h3"><a href="#card-grid">Responsive card grid</a></li>
+              <li class="toc-h3"><a href="#holy-grail">Holy grail layout</a></li>
+              <li class="toc-h3"><a href="#magazine-layout">Magazine layout</a></li>
+              <li><a href="#common-mistakes">3 mistakes to avoid</a></li>
+              <li><a href="#browser-support">Browser support in 2024</a></li>
+            </ul>
+          </nav>
+
+          <!-- Sidebar newsletter -->
+          <div class="sidebar-newsletter">
+            <h3>Get articles like this</h3>
+            <p>New articles every Tuesday. No spam. Unsubscribe anytime.</p>
+            <form action="#" method="post" novalidate>
+              <label for="sidebar-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+              <input
+                id="sidebar-email"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+              />
+              <button type="submit">Subscribe →</button>
+            </form>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════
+       SITE FOOTER  (identical to index.html)
+  ════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" aria-label="The Craft home">Web <span style="color:#93c5fd">Craft</span></div>
+          <p>In-depth articles on design, development, and the craft of shipping software people love.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Performance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Write for us</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Cookie settings</a></li>
+            <li><a href="#">RSS feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 Web Craft. All rights reserved.</p>
+        <p>Built with semantic HTML and pure CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Mobile nav toggle ──────────────────────────────────── */
+    const toggle = document.querySelector('.nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    /* ── Reading progress bar ───────────────────────────────── */
+    const progressBar = document.getElementById('reading-progress');
+    const article = document.getElementById('article-body');
+
+    function updateProgress() {
+      const articleTop = article.getBoundingClientRect().top + window.scrollY;
+      const articleHeight = article.offsetHeight;
+      const scrolled = window.scrollY - articleTop;
+      const progress = Math.min(Math.max((scrolled / articleHeight) * 100, 0), 100);
+      progressBar.style.width = progress + '%';
+      progressBar.setAttribute('aria-valuenow', Math.round(progress));
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    /* ── Copy link button ───────────────────────────────────── */
+    document.getElementById('copy-link-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.getElementById('copy-link-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy link'; }, 2000);
+      });
+    });
+  </script>
+
+</body>
+</html>

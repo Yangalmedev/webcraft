@@ -147,21 +147,16 @@ NAVIGATIONS
 }
 .breadcrumb ol {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.375rem 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   font-size: 13px;
   color: var(--color-text-muted);
-  
+}
 .breadcrumb a {
   color: var(--color-text-muted);
   transition: color var(--transition);
-  color: var(--color-text); 
-  white-space: normal; /* allow wrapping */ 
-  overflow-wrap: anywhere; /* break mid-word only if necessary */ 
-  min-width: 0;
 }
 .breadcrumb a:hover {
   color: var(--color-accent);
@@ -171,12 +166,8 @@ NAVIGATIONS
   opacity: 0.4;
   margin-left: 0.5rem;
 }
-
 .breadcrumb [aria-current="page"] { 
   color: var(--color-text); 
-  white-space: normal; /* allow wrapping */ 
-  overflow-wrap: anywhere; /* break mid-word only if necessary */ 
-  min-width: 0;
 }
 
 /* ===========================
@@ -1043,5 +1034,4 @@ FOOTER
   .team-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .nl-form { flex-direction: column; }
-  }
 }

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/main.css">
-  <script src="./assets/js/index.js"></script>
+  <script src="assets/js/index.js"></script>
 </head>
 <body>
 
@@ -24,9 +24,7 @@
       
       <a href="" class="logo">
         <img src="assets/logo/logo-symbol1.png" alt="" style="width: 40px;">  
-        <p> </p>
-        Web
-        <span class="mark">Craft</span>
+        <p class="name">Web<span class="mark">Craft</span></p>
       </a>
 
       <nav class="nav-inner" aria-label="Main navigation">
@@ -48,16 +46,13 @@
       </nav>
 
       <div class="header-actions">
-        <a href="#" class="circle-btn" aria-label="Search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        </a>
         <a href="#" class="circle-btn" aria-label="Notifications">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
         </a>
         <button class="btn-pill small">Subscribe</button>
-        <div class="burger">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -68,35 +63,83 @@
   <main id="main-content">
 
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container">
-        <span class="hero-eyebrow">Est. 2024</span>
-        <h1 id="hero-heading">Ideas worth building,<br>words worth reading</h1>
-        <p>In-depth articles on design, front-end development, and the craft of shipping software people love.</p>
-        <div class="hero-search" role="search">
-          <label for="search-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search articles</label>
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Search articles…"
-            aria-label="Search articles"
-          />
-          <button type="button" aria-label="Submit search">Search</button>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Est. 2024 · Web design &amp; engineering journal</div>
+          <h1 class="hero-title">Ideas worth<strong>Building</strong></h1>
+          <p class="lede">In-depth writing on design, front-end engineering, and the craft of shipping software people actually enjoy using.</p>
+          <div class="hero-cta-row">
+            <button class="btn-pill">More info
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a href="#" class="search-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              Search articles
+            </a>
+          </div>
+        </div>
+
+         
+
+        <div class="hero-media" aria-hidden="true">
+          
+          <svg viewBox="0 0 520 620" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#C6EA7E"/>
+                <stop offset="100%" stop-color="#4CAF6D"/>
+              </linearGradient>
+              <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5FBE7E"/>
+                <stop offset="100%" stop-color="#1E5C3D"/>
+              </linearGradient>
+              <!-- <linearGradient id="lg3" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1E5C3D"/>
+                <stop offset="100%" stop-color="#3E8A63"/>
+              </linearGradient>
+              <linearGradient id="lg4" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E4F5C6"/>
+                <stop offset="100%" stop-color="#8FD088"/>
+              </linearGradient> -->
+            </defs>
+
+            <path d="M330 40C260 20 190 70 175 150C160 230 210 260 190 330C170 400 110 420 120 500C130 580 220 610 300 590C420 560 470 470 460 380C450 290 400 270 410 200C420 130 400 60 330 40Z" fill="url(#lg2)" opacity="0.92"/>
+            <path d="M370 90C320 60 260 90 250 160C240 230 290 250 280 320C270 390 210 410 220 480C230 550 300 570 360 545C450 505 480 420 465 340C450 260 410 250 415 190C420 130 420 120 370 90Z" fill="url(#lg1)" opacity="0.85"/>
+            <!-- <path d="M260 130C210 150 190 210 220 260C250 310 300 300 310 350C320 400 280 430 300 480C320 530 380 530 410 490C450 440 440 380 410 340C380 300 350 300 350 250C350 200 310 110 260 130Z" fill="url(#lg4)" opacity="0.8"/>
+            <path d="M300 200C270 220 265 260 290 290C315 320 345 305 355 335C365 365 340 390 360 415C380 440 415 430 425 400C440 355 420 320 400 305C380 290 375 270 380 245C385 215 330 180 300 200Z" fill="url(#lg3)" opacity="0.9"/>
+            <ellipse cx="150" cy="470" rx="55" ry="70" fill="url(#lg1)" opacity="0.55"/> -->
+          </svg>
+
+        </div>
+        <div class="hero-img">
+          <img src="assets/images/hero-img.png" alt="">
         </div>
       </div>
+
+      <!-- <div class="wrap hero-footer-row">
+        <div class="subtitle-card">
+          <h3>Trending now</h3>
+          <p>The end of the hamburger menu — a look at where mobile navigation is heading in 2026.</p>
+        </div>
+        <div class="digital-block">
+          <h4>For developers &amp; designers</h4>
+          <p>Weekly deep dives on the systems, tools, and decisions behind interfaces people love to use — written by people who ship.</p>
+        </div>
+      </div> -->
     </section>
 
     <!-- Category filter -->
     <section class="category-bar" aria-label="Filter by category">
       <div class="container">
         <ul class="category-list" role="list">
-          <li><a class="category-chip active" aria-pressed="true">All posts</a></li>
-          <li><a class="category-chip" aria-pressed="false">Design</a></li>
-          <li><a class="category-chip" aria-pressed="false">Development</a></li>
-          <li><a class="category-chip" aria-pressed="false" href="/pages/posts/category.html">CSS</a></li>
-          <li><a class="category-chip" aria-pressed="false">Accessibility</a></li>
-          <li><a class="category-chip" aria-pressed="false">Performance</a></li>
-          <li><a class="category-chip" aria-pressed="false">Career</a></li>
+          <li><a class="category-chip active" aria-pressed="true">All posts<span class="count">312</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false">Design<span class="count">45</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false">Development<span class="count">125</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false" href="/pages/posts/category.html">CSS<span class="count">67</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false">Accessibility<span class="count">89</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false">Performance<span class="count">24</span></button></a></li>
+          <li><a class="category-chip" aria-pressed="false">Career<span class="count">9</span></button></a></li>
         </ul>
       </div>
     </section>

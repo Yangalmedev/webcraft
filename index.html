@@ -42,7 +42,7 @@
         <a href="/pages/nav/design.html">Design</a>
         <a href="/pages/nav/development.html">Development</a>
         <a href="/pages/nav/about.html">About</a>
-        <a href="#newsletter" class="nav-cta">Subscribe</a>
+        <!-- <a href="#newsletter" class="nav-cta">Subscribe</a> -->
       </nav>
 
       <div class="header-actions">
@@ -50,6 +50,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
         </a>
         <button class="btn-pill small">Subscribe</button>
+
         <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
@@ -68,7 +69,9 @@
         <div class="hero-copy">
           <div class="eyebrow">Est. 2024 · Web design &amp; engineering journal</div>
           <h1 class="hero-title">Ideas worth<strong>Building</strong></h1>
-          <p class="lede">In-depth writing on design, front-end engineering, and the craft of shipping software people actually enjoy using.</p>
+          <p class="lede">
+            In-depth writing on design, front-end engineering, and the craft of shipping software people actually enjoy using.
+          </p>
           <div class="hero-cta-row">
             <button class="btn-pill">More info
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -131,17 +134,15 @@
 
     <!-- Category filter -->
     <section class="category-bar" aria-label="Filter by category">
-      <div class="container">
-        <ul class="category-list" role="list">
-          <li><a class="category-chip active" aria-pressed="true">All posts<span class="count">312</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false">Design<span class="count">45</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false">Development<span class="count">125</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false" href="/pages/posts/category.html">CSS<span class="count">67</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false">Accessibility<span class="count">89</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false">Performance<span class="count">24</span></button></a></li>
-          <li><a class="category-chip" aria-pressed="false">Career<span class="count">9</span></button></a></li>
-        </ul>
-      </div>
+      <ul class="category-list" role="list">
+        <li><a class="category-chip active" aria-pressed="true">All posts<span class="count">312</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false">Design<span class="count">45</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false">Development<span class="count">125</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false" href="/pages/posts/category.html">CSS<span class="count">67</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false">Accessibility<span class="count">89</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false">Performance<span class="count">24</span></button></a></li>
+        <li><a class="category-chip" aria-pressed="false">Career<span class="count">9</span></button></a></li>
+      </ul>
     </section>
 
     <!-- Featured post -->

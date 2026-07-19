@@ -676,6 +676,14 @@ CATEGORY FILTER
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
   padding:20px 0;
+
+  /* Enables smooth swipe navigation on mobile devices */
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 16px;
+  
+  /* Hides the default scrollbar on modern web engines */
+  -webkit-overflow-scrolling: touch;
 }
 .category-bar::-webkit-scrollbar { display: none; }
 
@@ -683,6 +691,11 @@ CATEGORY FILTER
   display: flex;
   gap: 0.5rem;
   min-width: max-content;
+  flex-shrink: 0; 
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  
 }
 
 .category-chip {
@@ -1124,33 +1137,54 @@ FOOTER
 }
 
 @media (max-width: 640px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .hero-img, .hero-media { display: none; }
   .nav-toggle { display: flex; }
 
   .nav-mobile {
+    position: fixed;            /* Takes it completely out of document layout flow */
+    top: 70px;                  /* Positions it precisely below your main header */
+    right: 0;
+    width: 40vw;               /* Fills the absolute width of the device screen */
+    height: calc(100vh - 50px); /* Fills the rest of the available vertical viewport */
+    background-color: #f5f6f6;  /* Matches your light site background tint */
+    
+    z-index: 9999;              /* Forces the menu to sit on top of all hero assets */
+    box-sizing: border-box;
+    
+    /* Layout styling for links inside the menu overlay */
     display: none;
     flex-direction: column;
-    gap: 0.25rem;
-    padding: 0.75rem 0 1rem;
-    border-top: 1px solid var(--color-border);
+    align-items: center;        /* Centers links horizontally */
+    justify-content: flex-start;
+    gap: 12px;                  /* Clean spacing gaps between list rows */
+    padding: 20px 24px;
   }
-  .nav-mobile.open { display: flex; }
+
+  /* Clear typography styling for links inside the open panel */
   .nav-mobile a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--color-text-muted);
-    padding: 0.5rem 0.25rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink, #1a1a1a);
+    text-decoration: none;
+    width: 100%;
+    text-align: right;
   }
-  .nav-mobile a:hover { color: var(--color-text); }
+
+  .nav-mobile a::hover {
+    color: var(--color-accent);
+  }
+
+  /* Fixes the extra duplicate subscribe button inside the overlay */
   .nav-mobile .nav-cta {
-    display: inline-block;
-    text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 12px;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #C6EA7E, #4CAF6D);
     color: #fff;
-    background: var(--color-accent);
-    padding: 0.6rem 1rem;
-    border-radius: var(--radius-sm);
+    border-radius: 30px;
+    display: inline-block;
+    width: auto;                /* Prevents full-width block stretch */
   }
+
   
   .name, .hero-search {
     display: none;
@@ -1174,4 +1208,39 @@ FOOTER
   .team-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .nl-form { flex-direction: column; }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centers all text elements inside */
+    padding: 40px 24px;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers block elements like buttons */
+    padding: 0;
+  }
+
+  .hero-copy p.lede {
+    max-width: 100%; /* Allows the paragraph to sit evenly in the center */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-row {
+    justify-content: center; /* Centers the CTA buttons horizontally */
+    width: 100%;
+  }
+}
+
+@media (max-width: 334px) {
+  .hero-cta-row {
+    display: flex;
+    flex-direction: column;
+  }
 }

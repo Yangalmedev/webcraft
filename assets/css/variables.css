@@ -10,6 +10,25 @@
   --color-tag-bg:      #eff6ff;
   --color-tag-text:    #1d4ed8;
 
+  --ink:#242A38;
+  --paper:#F1F1EF;
+  --stone:#FFFFFF;
+  --stone-2:#E7E6E2;
+  --line:#E4E3DF;
+  --graphite:#6A6E78;
+  --graphite-2:#9A9D9F;
+  --white:#FFFFFF;
+
+  --green-light:#B7E36A;
+  --green-mid:#4CAF6D;
+  --green-dark:#1E5C3D;
+  --green:#2E7D4F;
+  --green-tint:#E9F5EC;
+  --grad: linear-gradient(150deg, var(--green-light) 0%, var(--green-mid) 48%, var(--green-dark) 100%);
+
+  --display: 'Poppins', sans-serif;
+  --sans: 'Inter', sans-serif;
+
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 

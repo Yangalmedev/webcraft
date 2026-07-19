@@ -58,11 +58,70 @@ NAVIGATIONS
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(241,241,239,0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
 }
+
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  gap: 1rem;
+  padding: 0px 70px;
+}
+
+.head-container .logo {
+  display: flex;
+  align-items: center;
+}
+
+.head-container .logo p {
+  font-size: 1.3rem;
+  color: green;
+  padding-left: 10px;
+}
+
+
+.header-actions{display:flex; align-items:center; gap:10px;}
+  .circle-btn{
+    width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--white);
+    border:1px solid var(--line);
+    color:var(--graphite);
+    transition:all .15s ease;
+  }
+  .circle-btn:hover{border-color:var(--green-mid);color:var(--green-dark);}
+  .burger{
+    width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--ink);color:var(--white);
+    margin-left:6px;
+  }
+
+  .btn-pill{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:13.5px;
+    letter-spacing:.02em;
+    color:var(--white);
+    background:var(--grad);
+    border:none;
+    border-radius:100px;
+    padding:14px 30px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:0 10px 24px -10px rgba(30,92,61,0.55);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-pill:hover{transform:translateY(-1px);box-shadow:0 14px 28px -10px rgba(30,92,61,0.6);}
+  .btn-pill:active{transform:translateY(0);}
+  .btn-pill.small{padding:10px 20px;font-size:12.5px;}
 
 .nav-inner {
   display: flex;
@@ -82,10 +141,23 @@ NAVIGATIONS
 }
 .nav-logo span { color: var(--color-accent); }
 
+.logo{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:21px;
+  letter-spacing:-0.01em;
+}
+.logo .mark{
+  background:var(--grad);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
 .nav-links a {

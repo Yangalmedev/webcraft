@@ -1157,12 +1157,23 @@ FOOTER
     height: auto;
     display: block;
   } 
+}
 
-  .post-grid { grid-template-columns: repeat(2, 1fr); }
-  .featured-card { grid-template-columns: 1fr; }
-  .featured-image { min-height: 200px; }
-  .featured-body { padding: 1.5rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) {
+  .read-more, .post-tag, p {
+    display: none;
+  }
+
+  .featured-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .feat-img {
+    width: 100%;
+    height: auto;
+  }
 
   /* About Page */
   .stats-row { grid-template-columns: 1fr 1fr; }

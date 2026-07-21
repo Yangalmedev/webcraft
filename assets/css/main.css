@@ -1263,6 +1263,20 @@ FOOTER
   }
 }
 
+@media (max-width: 426px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-search, .newsletter-form { flex-direction: column; }
+  .pagination { flex-wrap: wrap; }
+
+  /* About Page */
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nl-form { flex-direction: column; }
+}
+
 @media (max-width: 334px) {
   .hero-cta-row {
     display: flex;

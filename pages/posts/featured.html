@@ -23,38 +23,41 @@
        SITE HEADER / NAV  (identical to index.html)
   ════════════════════════════════════════════════════════ -->
   <header class="site-header" role="banner">
-    <div class="container">
+    <div class="head-container">
+      
+      <a href="" class="logo">
+        <img src="/assets/logo/logo-symbol1.png" alt="" style="width: 40px;">  
+        <p class="name">Web<span class="mark">Craft</span></p>
+      </a>
+
       <nav class="nav-inner" aria-label="Main navigation">
-        <a href="index.html" class="nav-logo">Web <span>Craft</span></a>
-
         <ul class="nav-links" role="list">
-          <li><a href="../../index.html">Blog</a></li>
-          <li><a href="../nav/design.html">Design</a></li>
-          <li><a href="../nav/development.html">Development</a></li>
-          <li><a href="../nav/about.html">About</a></li>
+          <li><a href="/index.html" aria-current="page">Blog</a></li>
+          <li><a href="/pages/nav/design.html">Design</a></li>
+          <li><a href="/pages/nav/development.html">Development</a></li>
+          <li><a href="/pages/nav/about.html">About</a></li>
         </ul>
-
-        <a href="#" class="nav-cta">Subscribe</a>
-
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-          aria-label="Toggle navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
 
+      <!-- Mobile nav (hidden by default) -->
       <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
-        <a href="../../index.html">Blog</a>
-        <a href="../nav/design.html">Design</a>
-        <a href="../nav/development.html">Development</a>
-        <a href="../nav/about.html">About</a>
-        <a href="#" class="nav-cta">Subscribe</a>
+        <a href="index.html">Blog</a>
+        <a href="/pages/nav/design.html">Design</a>
+        <a href="/pages/nav/development.html">Development</a>
+        <a href="/pages/nav/about.html">About</a>
+        <!-- <a href="#newsletter" class="nav-cta">Subscribe</a> -->
       </nav>
+
+      <div class="header-actions">
+        <a href="#" class="circle-btn" aria-label="Notifications">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
+        </a>
+        <button class="btn-pill small">Subscribe</button>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 

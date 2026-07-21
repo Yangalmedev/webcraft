@@ -43,7 +43,16 @@
 =========================== */
 .stats-strip {
   border-bottom: 1px solid var(--color-border);
+  
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 16px;
+  
+  /* Hides the default scrollbar on modern web engines */
+  -webkit-overflow-scrolling: touch;
 }
+.category-bar::-webkit-scrollbar { display: none; }
+
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1258,6 +1258,32 @@ FOOTER
   .values-grid { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
   .contribute-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .team-section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--color-border);
+
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 16px;
+    
+    /* Hides the default scrollbar on modern web engines */
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-bar::-webkit-scrollbar { display: none; }
+  .values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 16px;
+  
+  /* Hides the default scrollbar on modern web engines  */
+  -webkit-overflow-scrolling: touch; 
+}
+.category-bar::-webkit-scrollbar { display: none; } 
+
 
   .hero-grid {
     display: flex;

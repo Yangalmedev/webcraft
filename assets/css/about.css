@@ -137,14 +137,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 
-  overflow-x: auto;
+  /* overflow-x: auto;
   white-space: nowrap;
   padding: 10px 16px;
   
-  /* Hides the default scrollbar on modern web engines */
-  -webkit-overflow-scrolling: touch;
+  /* Hides the default scrollbar on modern web engines 
+  -webkit-overflow-scrolling: touch; */
 }
-.category-bar::-webkit-scrollbar { display: none; }
+/* .category-bar::-webkit-scrollbar { display: none; } */
 
 .value-card {
   background: var(--color-bg);
@@ -185,14 +185,14 @@
   padding: 5rem 0;
   border-bottom: 1px solid var(--color-border);
 
-  overflow-x: auto;
+  /* overflow-x: auto;
   white-space: nowrap;
   padding: 10px 16px;
   
-  /* Hides the default scrollbar on modern web engines */
-  -webkit-overflow-scrolling: touch;
+  /* Hides the default scrollbar on modern web engines 
+  -webkit-overflow-scrolling: touch; */
 }
-.category-bar::-webkit-scrollbar { display: none; }
+/* .category-bar::-webkit-scrollbar { display: none; } */
 
 .team-section h2 {
   font-family: var(--font-serif);

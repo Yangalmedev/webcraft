@@ -113,8 +113,8 @@
             <path d="M300 200C270 220 265 260 290 290C315 320 345 305 355 335C365 365 340 390 360 415C380 440 415 430 425 400C440 355 420 320 400 305C380 290 375 270 380 245C385 215 330 180 300 200Z" fill="url(#lg3)" opacity="0.9"/>
             <ellipse cx="150" cy="470" rx="55" ry="70" fill="url(#lg1)" opacity="0.55"/> -->
           </svg>
-
         </div>
+        
         <div class="hero-img">
           <img src="assets/images/hero-img.png" alt="">
         </div>
@@ -147,26 +147,19 @@
 
     <!-- Featured post -->
     <section class="featured" aria-labelledby="featured-heading">
-      <div class="container">
-        <p class="featured-label" id="featured-heading">Featured article</p>
+      <p class="featured-label" id="featured-heading">Featured article</p>
+      <div class="feat-container">
+        
         <article class="featured-card">
-          <img src="assets/images/css-grid-guide.png" alt="Complete CSS Guide Thumbnail">
-          <!-- <div class="featured-image img-blue" aria-hidden="true">
-             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5">
-              <path d="M4 5h16M4 12h10M4 19h6" stroke-linecap="round"/>
-            </svg> 
-          </div> -->
+          <img class="feat-img" src="assets/images/css-grid-guide.png" alt="Complete CSS Guide Thumbnail">
+        
           <div class="featured-body">
             <span class="post-tag">CSS</span>
-            <h2><a href="pages/posts/featured.html">The complete guide to CSS Grid — from first principles to production</a></h2>
-            <p>CSS Grid is the most powerful layout system available in CSS. This guide walks through every property, every pattern, and every gotcha you'll encounter building real layouts.</p>
-            <div class="post-meta">
-              <div class="author-avatar" aria-hidden="true">MA</div>
-              <span>Maria Alcantara</span>
-              <span class="meta-dot" aria-hidden="true">·</span>
-              <time datetime="2024-05-12">May 12, 2024</time>
-              <span class="meta-dot" aria-hidden="true">·</span>
-              <span>12 min read</span>
+            <h3><a href="pages/posts/featured.html">The complete guide to CSS Grid — from first principles to production</a></h3>
+            <p>This guide walks through every property, every pattern, and every gotcha you'll encounter building real layouts.</p>
+            <div class="byline">
+              <div class="avatar">MK</div>
+              <div><div class="who">Maya Klein</div><div class="meta">Jul 14, 2026 · 9 min read</div></div>
             </div>
             <a href="pages/posts/featured.html" class="read-more" aria-label="Read the full article on CSS Grid">
               Read article
@@ -176,6 +169,16 @@
             </a>
           </div>
         </article>
+
+        <aside class="featured-aside">
+          <div class="side-block">
+            <h3>Trending this week</h3>
+            <div class="trend-item rank-top"><span class="trend-num">01</span><div><h5><a href="#">The end of the hamburger menu?</a></h5><div class="meta">Design · 4.2k reads</div></div></div>
+            <div class="trend-item rank-top"><span class="trend-num">02</span><div><h5><a href="#">A field guide to CSS :has()</a></h5><div class="meta">CSS · 3.8k reads</div></div></div>
+            <div class="trend-item"><span class="trend-num">03</span><div><h5><a href="#">Designing empty states people don't hate</a></h5><div class="meta">Design · 2.9k reads</div></div></div>
+            <div class="trend-item"><span class="trend-num">04</span><div><h5><a href="#">Interviewing without a whiteboard</a></h5><div class="meta">Career · 2.1k reads</div></div></div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -347,6 +350,40 @@
         </form>
       </div>
     </section>
+
+    <!-- SIDEBAR -->
+
+    <!-- <aside class="sidebar">
+      <div class="side-block">
+        <h3>Trending this week</h3>
+        <div class="trend-item rank-top"><span class="trend-num">01</span><div><h5><a href="#">The end of the hamburger menu?</a></h5><div class="meta">Design · 4.2k reads</div></div></div>
+        <div class="trend-item rank-top"><span class="trend-num">02</span><div><h5><a href="#">A field guide to CSS :has()</a></h5><div class="meta">CSS · 3.8k reads</div></div></div>
+        <div class="trend-item"><span class="trend-num">03</span><div><h5><a href="#">Designing empty states people don't hate</a></h5><div class="meta">Design · 2.9k reads</div></div></div>
+        <div class="trend-item"><span class="trend-num">04</span><div><h5><a href="#">Interviewing without a whiteboard</a></h5><div class="meta">Career · 2.1k reads</div></div></div>
+      </div>
+
+      <div class="side-block newsletter-block">
+        <div class="eyebrow2">The Craft Letter</div>
+        <h3>One good read, every Friday.</h3>
+        <p>No spam, no filler — just the piece we'd want in our own inbox. Unsubscribe anytime.</p>
+        <div class="nl-input-row">
+          <input type="email" placeholder="you@email.com">
+          <button>Subscribe for free</button>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <h3>Browse by topic</h3>
+        <div class="cat-list">
+          <a href="#"><span class="name"><span class="dot"></span>Design</span><span class="n">84</span></a>
+          <a href="#"><span class="name"><span class="dot"></span>Development</span><span class="n">96</span></a>
+          <a href="#"><span class="name"><span class="dot"></span>CSS</span><span class="n">57</span></a>
+          <a href="#"><span class="name"><span class="dot"></span>Accessibility</span><span class="n">31</span></a>
+          <a href="#"><span class="name"><span class="dot"></span>Performance</span><span class="n">28</span></a>
+          <a href="#"><span class="name"><span class="dot"></span>Career</span><span class="n">16</span></a>
+        </div>
+      </div>
+    </aside> -->
 
   </main>
 

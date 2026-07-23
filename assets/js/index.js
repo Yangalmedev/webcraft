@@ -30,3 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const sidebar = document.getElementById("filter-sidebar");
+
+  if (toggleBtn && sidebar) {
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = sidebar.classList.toggle("is-open");
+      
+      // Keep accessibility states perfectly sync'd
+      toggleBtn.setAttribute("aria-expanded", isOpen);
+      
+      // Optional state text helper
+      const btnText = toggleBtn.querySelector(".burger-text");
+      if (btnText) {
+        btnText.textContent = isOpen ? "Close Filters" : "Filter Articles";
+      }
+    });
+  }
+});
+

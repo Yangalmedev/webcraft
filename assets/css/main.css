@@ -1058,7 +1058,7 @@ FOOTER
     padding: 2rem;
   }
 
-  .read-more, .post-tag, p {
+  .read-more, .post-tag, p, .main-actions {
     display: none;
   }
 
@@ -1222,6 +1222,22 @@ FOOTER
   .feat-container {
     display: flex;
     flex-direction: column;
+  }
+
+  /* Style your new button appearance */
+  
+  /* Collapse the sidebar natively on smaller displays */
+  .filter-sidebar {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  /* Class toggled by JavaScript to show the menu */
+  .filter-sidebar.is-open {
+    display: block;
+    background-color: var(--color-bg);
+    z-index: 100;
   }
 }
 

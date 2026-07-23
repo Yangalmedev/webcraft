@@ -11,7 +11,8 @@
 .stat-label { font-size: 12px; color: var(--color-text-muted); }
 
 /* PAGE LAYOUT */ 
-.page-layout { display: grid; grid-template-columns: 240px 1fr; gap: 3rem; padding: 3rem 0 4rem; align-items: start; }
+/* .page-layout { display: grid; grid-template-columns: 240px 1fr; gap: 3rem;  } */
+/* padding: 3rem 0 4rem; align-items: start; */
 
 /* SIDEBAR FILTERS */
 .filter-sidebar { position: sticky; top: 80px; }
@@ -105,4 +106,3 @@
 .newsletter-row input:focus { border-color: var(--color-accent); }
 .newsletter-row button { font-family: var(--font-sans); font-size: 13px; font-weight: 500; padding: 0.55rem 1rem; background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius-sm); cursor: pointer; white-space: nowrap; transition: background var(--transition); }
 .newsletter-row button:hover { background: var(--color-accent-dark); }
-
